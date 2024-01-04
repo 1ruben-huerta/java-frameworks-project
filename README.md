@@ -11,7 +11,7 @@ Changes: 13 -> Added stylesheet, 15 -> changed title name, 20 -> added img logo,
 File: demo.css
 Changes: 1-4 -> Sized img logo.png from container, 6-9 -> Changed font in container, 11-14 -> Changed table margin-bottom and border color, 15-21 -> Changed filter bar border size/style/color
 
-Added logo.png to resources>static>css>logo.png
+Added logo.png to resources > static > css > logo.png
 
 
 
