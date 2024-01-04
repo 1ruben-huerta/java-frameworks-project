@@ -1,0 +1,22 @@
+.container img {
+    width: 50%;
+    height: auto;
+}
+
+.container h2 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+
+.table {
+    margin-bottom: 10%;
+    border-color: black;
+}
+
+#partkeyword {
+    border: 1px solid black;
+}
+
+#productkeyword {
+    border: 1px solid black;
+}
