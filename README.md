@@ -17,9 +17,19 @@ Added logo.png to resources > static > css > logo.png
 
 D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
 
-File Name:
-Line Number:
-Change:
+File Name: mainscreen.html
+Change: 21 -> Added button to about page
+
+File Name: about.html (created in templates folder)
+Changes: 1-21 -> Added template code from mainscreen to match theme and included navigation to mainscreen, 23-32 -> added about section of webpage, 33 -> added happy-scooter.jpg
+
+Change: Added happy-scooter.jpg to resources > static > css > happy-scooter.jpg
+
+Change: Added @AboutController class to Controllers folder
+
+File Name: demo.css 
+Change: 31-50 -> added styles to about.html: positioning and color
+
 
 
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
