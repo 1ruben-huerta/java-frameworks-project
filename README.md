@@ -34,11 +34,8 @@ Change: 31-50 -> added styles to about.html: positioning and color
 
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 
-Note: Make sure the sample inventory is added only when both the part and product lists are empty. When adding the sample inventory appropriate for the store, the inventory is stored in a set so duplicate items cannot be added to your products. When duplicate items are added, make a “multi-pack” part.
-
-File Name:
-Line Number:
-Change:
+File Name: BootStrapData.java
+Changes: 48-99 -> added code for 5 outsourced parts using setters to define them and then saved them to the repo, 106-118 -> added code to create my products and saved them to the product repo, 48 and 107 -> added specifically to only add products or parts when the lists are empty,  120-133 -> created a multi-pack part that searches for duplicates in the outsourced part repo, 134-147 -> created a multi-pack product and a list that finds all products so the products can be iterated through and duplicates can be searched for from the product repo. 
 
 
 
