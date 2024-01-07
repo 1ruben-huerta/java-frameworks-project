@@ -121,13 +121,13 @@ public class BootStrapData implements CommandLineRunner {
     if (outsourcedPartRepository.count() == 0) {
         Set<String> uniquePart = new HashSet<String>();
         for (OutsourcedPart part : outsourcedParts) {
-            if (uniquePart.add(part.getName())) {
+            if (!uniquePart.add(part.getName())) {
                 OutsourcedPart multipack = new OutsourcedPart();
                 multipack.setCompanyName(part.getCompanyName());
                 multipack.setName("Multi-Pack" + part.getName());
-                multipack.setId(part.getId());
+                multipack.setId(2010L);
                 multipack.setPrice(part.getPrice() * 2);
-                multipack.setInv(part.getInv() * 2);
+                multipack.setInv(part.getInv());
             }
         }
     }
@@ -136,12 +136,12 @@ public class BootStrapData implements CommandLineRunner {
     if (productRepository.count() == 0) {
         Set<String> uniqueProduct = new HashSet<String>();
         for (Product product : allProducts) {
-            if (uniqueProduct.add(product.getName())) {
+            if (!uniqueProduct.add(product.getName())) {
                 Product multipackProd = new Product();
                 multipackProd.setName("Multi-Pack" + product.getName());
-                multipackProd.setId(product.getId());
+                multipackProd.setId(1090L);
                 multipackProd.setPrice(product.getPrice() * 2);
-                multipackProd.setInv(product.getInv() * 2);
+                multipackProd.setInv(product.getInv());
             }
         }
     }
