@@ -41,10 +41,16 @@
 
 #happy-scooter {
     width: 50%;
-    height: auto;
+    height: 50vh;
 }
+
 
 body {
     background: linear-gradient(to top, black, white 5%);
-    height: 0%;
+    height: 100%;
+}
+
+#body-about {
+    background: linear-gradient(to top, black, white 5%);
+    height: 100vh;
 }
