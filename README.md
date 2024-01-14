@@ -40,13 +40,15 @@ Changes: 48-99 -> added code for 5 outsourced parts using setters to define them
 
 
 F.  Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
-•  The “Buy Now” button must be next to the buttons that update and delete products.
-•  The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
-•  Display a message that indicates the success or failure of a purchase.
 
-File Name:
-Line Number:
-Change:
+File Name: mainscreen.html 
+Change: created a "Buy Now" button that links to buyNow() controller with an input of product ID to identify the product inventory to decrement.
+
+File Name: created BuyNowController.java
+Changes: 13-30 -> created a controller and getmapping for a buyNow button to decrement inventory by 1 and redirect as a success or failure. 
+
+Files Names: created buynowsuccess.html and buynowfailure.html
+Changes: 1-12 -> display a message of success or failure based on the respective redirect from the buyNow() controller.
 
 
 
