@@ -53,6 +53,8 @@ public class BootStrapData implements CommandLineRunner {
             hybelecWheels.setInv(100);
             hybelecWheels.setPrice(25.0);
             hybelecWheels.setId(2030L);
+            hybelecWheels.setMinInv(0);
+            hybelecWheels.setMaxInv(500);
             outsourcedPartRepository.save(hybelecWheels);
             //OutsourcedPart thePart=null;
             //part2
@@ -62,6 +64,8 @@ public class BootStrapData implements CommandLineRunner {
             normWheels.setInv(150);
             normWheels.setPrice(10.0);
             normWheels.setId(2040L);
+            normWheels.setMinInv(0);
+            normWheels.setMaxInv(500);
             outsourcedPartRepository.save(normWheels);
             //part3
             OutsourcedPart wheelScrewsEH = new OutsourcedPart();
@@ -70,6 +74,8 @@ public class BootStrapData implements CommandLineRunner {
             wheelScrewsEH.setInv(200);
             wheelScrewsEH.setPrice(2.0);
             wheelScrewsEH.setId(200L);
+            wheelScrewsEH.setMinInv(0);
+            wheelScrewsEH.setMaxInv(1000);
             outsourcedPartRepository.save(wheelScrewsEH);
             //part 4
             OutsourcedPart normScrews = new OutsourcedPart();
@@ -78,6 +84,8 @@ public class BootStrapData implements CommandLineRunner {
             normScrews.setInv(150);
             normScrews.setPrice(1.0);
             normScrews.setId(100L);
+            normScrews.setMinInv(0);
+            normScrews.setMaxInv(1000);
             outsourcedPartRepository.save(normScrews);
             //part 5
             OutsourcedPart handleSleeves = new OutsourcedPart();
@@ -86,6 +94,8 @@ public class BootStrapData implements CommandLineRunner {
             handleSleeves.setInv(120);
             handleSleeves.setPrice(5.0);
             handleSleeves.setId(1000L);
+            handleSleeves.setMinInv(0);
+            handleSleeves.setMaxInv(1000);
             outsourcedPartRepository.save(handleSleeves);
             List<OutsourcedPart> outsourcedParts = (List<OutsourcedPart>) outsourcedPartRepository.findAll();
             for (OutsourcedPart part : outsourcedParts) {

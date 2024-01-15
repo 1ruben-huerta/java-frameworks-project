@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
 
+
 /**
  *
  *
@@ -40,6 +41,12 @@ public class AddOutsourcedPartController {
     @PostMapping("/showFormAddOutPart")
     public String submitForm(@Valid @ModelAttribute("outsourcedpart") OutsourcedPart part, BindingResult bindingResult, Model theModel){
         theModel.addAttribute("outsourcedpart",part);
+        if (part.getMinInv() > 1000 || part.getMaxInv() < 0) {
+            bindingResult.rejectValue("minInv", "minInv.invalid", "Minimum inventory size value cannot be over 1000");
+            bindingResult.rejectValue("maxInv", "maxInv.invalid", "Maximum inventory size value cannot be below 0");
+            return "OutsourcedPartForm";
+        }
+
         if(bindingResult.hasErrors()){
             return "OutsourcedPartForm";
         }

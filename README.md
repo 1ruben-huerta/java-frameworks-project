@@ -47,7 +47,7 @@ Change: created a "Buy Now" button that links to buyNow() controller with an inp
 File Name: created BuyNowController.java
 Changes: 13-30 -> created a controller and getmapping for a buyNow button to decrement inventory by 1 and redirect as a success or failure. 
 
-Files Names: created buynowsuccess.html and buynowfailure.html
+File Names: created buynowsuccess.html and buynowfailure.html
 Changes: 1-12 -> display a message of success or failure based on the respective redirect from the buyNow() controller.
 
 
@@ -59,11 +59,29 @@ G.  Modify the parts to track maximum and minimum inventory by doing the followi
 •  Rename the file the persistent storage is saved to.
 •  Modify the code to enforce that the inventory is between or at the minimum and maximum value.
 
-File Name:
-Line Number:
-Change:
+File Name: Part.java
+Changes 33-36 -> created minInv and maxInv variables using Bean validation constraints, 59-65 -> added minInv and maxInv to Part Constructor, 100-106 -> added setters and getters for newly added variables. 
 
 
+File Name: InhousePartForm.html 
+Changes: 24-28, added minInv and maxInv as form values.
+
+File Name: OutsourcedPartForm.html 
+Changes: 25-29, added minInv and maxInv as form values.
+
+File Name: BootStrapData.java
+Changes: (56-57, 67-68, 77-78, 87-88, 97-98) -> set min and max inv values for outsourced parts that exist.
+
+Changed db file name to spring-boot-d287.
+
+File Name: application.properties 
+Changes: 6 -> changed db name to spring-boot-d287.
+
+File Name: AddInhousePartController.java
+Changes: 42-46 -> added cross-validation for minInv and maxInv so they can't exceed each others' limits.
+
+File Name: AddOutsourcedPartController.java
+Changes: 44-48 -> added cross-validation for minInv and maxInv so they can't exceed each others' limits.
 
 
 H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
