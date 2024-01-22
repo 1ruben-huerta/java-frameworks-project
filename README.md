@@ -77,23 +77,19 @@ Changed db file name to spring-boot-d287.
 File Name: application.properties 
 Changes: 6 -> changed db name to spring-boot-d287.
 
-File Name: AddInhousePartController.java
-Changes: 42-46 -> added cross-validation for minInv and maxInv so they can't exceed each others' limits.
-
-File Name: AddOutsourcedPartController.java
-Changes: 44-48 -> added cross-validation for minInv and maxInv so they can't exceed each others' limits.
-
 
 H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
 •  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
 •  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
 •  Display error messages when adding and updating parts if the inventory is greater than the maximum.
 
-File Name:
-Line Number:
-Change:
+File Name: AddInhousePartController.java
+Changes: 42-46 -> added cross-validation for minInv and maxInv so they can't exceed each others' limits and included error messages.
 
+File Name: AddOutsourcedPartController.java
+Changes: 44-48 -> added cross-validation for minInv and maxInv so they can't exceed each others' limits and included error messages.
 
+Updated EnufPartsValidator.java to check if a part would fall below the minimum inventory on lines 38-40, and updated the error message in ValidEnufParts.java to be a bit more specific on line 20.
 
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
