@@ -104,7 +104,4 @@ Changes: 53-56, updated the junit dependency to align with the version being use
 
 J.  Remove the class files for any unused validators in order to clean your code.
 
-File Name:
-Line Number:
-Change:
-
+File Name: DeletePartValidator.java class was removed because there were no usages found.
