@@ -94,9 +94,11 @@ Updated EnufPartsValidator.java to check if a part would fall below the minimum 
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
 
-File Name:
-Line Number:
-Change:
+File Name: PartTest.java
+Changes: 160-174, created two unit tests for minInv and maxInv. 
+
+File Name: pom.xml
+Changes: 53-56, updated the junit dependency to align with the version being used by the IDE.
 
 
 
