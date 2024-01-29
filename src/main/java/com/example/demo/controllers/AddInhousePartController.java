@@ -44,7 +44,10 @@ public class AddInhousePartController{
             theBindingResult.rejectValue("maxInv", "maxInv.invalid", "Maximum inventory size value cannot be below 0");
             return "InhousePartForm";
         }
-
+        if (part.getInv() < part.getMinInv() || part.getInv() > part.getMaxInv()) {
+            theBindingResult.rejectValue("inv", "inv.invalid", "Error: Inventory must be between minimum and maximum inventory levels");
+            return "InhousePartForm";
+        }
         if(theBindingResult.hasErrors()){
             return "InhousePartForm";
         }

@@ -69,6 +69,9 @@ Changes: 24-28, added minInv and maxInv as form values.
 File Name: OutsourcedPartForm.html 
 Changes: 25-29, added minInv and maxInv as form values.
 
+File Name: mainscreen.html
+Changes: 40-41, 50-51, added minimum and maximum inventory fields to the main form.
+
 File Name: BootStrapData.java
 Changes: (56-57, 67-68, 77-78, 87-88, 97-98) -> set min and max inv values for outsourced parts that exist.
 
@@ -84,10 +87,12 @@ H.  Add validation for between or at the maximum and minimum fields. The validat
 •  Display error messages when adding and updating parts if the inventory is greater than the maximum.
 
 File Name: AddInhousePartController.java
-Changes: 42-46 -> added cross-validation for minInv and maxInv so they can't exceed each others' limits and included error messages.
+Changes: 42-46 -> added cross-validation for minInv and maxInv so they can't exceed each others' limits and included error messages. 
+47-50 -> added validation between inventory and min/max inventory fields.
 
 File Name: AddOutsourcedPartController.java
 Changes: 44-48 -> added cross-validation for minInv and maxInv so they can't exceed each others' limits and included error messages.
+49-52 -> added validation between inventory and min/max inventory fields.
 
 Updated EnufPartsValidator.java to check if a part would fall below the minimum inventory on lines 38-40, and updated the error message in ValidEnufParts.java to be a bit more specific on line 20.
 
